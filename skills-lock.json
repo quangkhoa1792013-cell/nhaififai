@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "contextual-commit": {
+      "source": "berserkdisruptors/contextual-commits",
+      "sourceType": "github",
+      "skillPath": "skills/contextual-commit/SKILL.md",
+      "computedHash": "3ec7893fcabb2f1a3ab2e6cdf001354982aade9ed539047f44cb21858879eff0"
+    },
+    "recall": {
+      "source": "berserkdisruptors/contextual-commits",
+      "sourceType": "github",
+      "skillPath": "skills/recall/SKILL.md",
+      "computedHash": "b12b1e8916baa48bf8374c6bc629f23acfb870d97e8a22ff629ef21face88317"
+    },
+    "research": {
+      "source": "Weizhena/Deep-Research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/research-codex-en/research/SKILL.md",
+      "computedHash": "14816456e33afd11ec1cc8bf3b54efd2fef7231e22ca8e03b4b43d7ca5420424"
+    },
+    "research-add-fields": {
+      "source": "Weizhena/Deep-Research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/research-codex-en/research-add-fields/SKILL.md",
+      "computedHash": "3ad2c72c93da594a61a3d76488523cdcc29ca95de8f08c708ede8dbfbda5c5f2"
+    },
+    "research-add-items": {
+      "source": "Weizhena/Deep-Research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/research-codex-en/research-add-items/SKILL.md",
+      "computedHash": "5307a5bc2ffd1b4a363289dab7b34eed3481186d792b4b905d3bdaad899ea1e1"
+    },
+    "research-deep": {
+      "source": "Weizhena/Deep-Research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/research-codex-en/research-deep/SKILL.md",
+      "computedHash": "b2160ad35c4ad35b8227a6cd2caf29006b6f671990815887d2ac8eb3f6a6daf6"
+    },
+    "research-report": {
+      "source": "Weizhena/Deep-Research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/research-codex-en/research-report/SKILL.md",
+      "computedHash": "8fc1d26e247f1a47d5750fa0ad22084b82c3e5e8a5f00839c90a5b692c97d374"
+    },
+    "skill-generalizer": {
+      "source": "hqhq1025/skill-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/skill-generalizer/SKILL.md",
+      "computedHash": "e60815f11ad18158d5b5ba13d8d0383576b73735e4034665e31dc2fe5e495bf3"
+    },
+    "skill-miner": {
+      "source": "hqhq1025/skill-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/skill-miner/SKILL.md",
+      "computedHash": "e7dcb26d6a7b5708ff57c5d3ff3b8d6640545fd9df8fe9dc696ab3ea115f1d2b"
+    },
+    "skill-personalizer": {
+      "source": "hqhq1025/skill-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/skill-personalizer/SKILL.md",
+      "computedHash": "62d6713a27874b8ba80c227cbc43fc0a9551e2c93d94885263c6e3b51fc9f341"
+    }
+  }
+}
