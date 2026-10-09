@@ -1,17 +1,253 @@
 {
   "version": 1,
   "skills": {
+    "agents-md-expert": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agents-md-expert/SKILL.md",
+      "computedHash": "92224b8f30260f2c1315edf91bc73deeee9f687f462478cc8eda74457a1f2706"
+    },
+    "audit-overengineering": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/audit-overengineering/SKILL.md",
+      "computedHash": "72597ca379bb4b80ba9b7b522bc837139334e950e66060d375eac34802ff7598"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "computedHash": "b95dc657c5dd79caf7340ee6dead6faf2ce2d1cc613352a027fa8993966b41b7"
+    },
+    "code-review-skill": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-review-skill/SKILL.md",
+      "computedHash": "bd0d18995d563ec5c4d9e1f754530974577e4f75cdd649be0e9da2dcb3f7edd3"
+    },
+    "codegraph": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/codegraph/SKILL.md",
+      "computedHash": "8ac558c187a4026299321c796b7c1ac6218feb61e4b79ee2f17529ad96e983c6"
+    },
+    "commit": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/commit/SKILL.md",
+      "computedHash": "07a817020394f0001d873bb3d35737f5c17d18dbec4a958d7fdeca280bf710bb"
+    },
     "contextual-commit": {
       "source": "berserkdisruptors/contextual-commits",
       "sourceType": "github",
       "skillPath": "skills/contextual-commit/SKILL.md",
       "computedHash": "3ec7893fcabb2f1a3ab2e6cdf001354982aade9ed539047f44cb21858879eff0"
     },
+    "diagnosing-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/diagnosing-superpowers/SKILL.md",
+      "computedHash": "0f33f20feb5340f7be932581880325725b0d2894e15193bffeab53ad474c3267"
+    },
+    "diagram-design": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/diagram-design/SKILL.md",
+      "computedHash": "dc50d0a62e44f8c818bffdd6506defd7fe889b0546a0565124305b8bd4073661"
+    },
+    "dispatching-parallel-agents": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/dispatching-parallel-agents/SKILL.md",
+      "computedHash": "b011107f17188e0b2898bb1856b5bac8b49537cc86e737c82126558a235bd62a"
+    },
+    "drawio-skill": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/drawio-skill/SKILL.md",
+      "computedHash": "1dc02c4e1b4a2d8f85a422025307accb9f3ff2cdbc80847888daaa86835a38de"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "computedHash": "5d587b5a8ed12c3d6808bce1561d9a72eab37a9b44d51d9dff99232decaae78e"
+    },
+    "find-skills": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "204bc6a914ad462d5622bf19e78aecd90aa60f6b4e4e75e4dd3d6f9986d35cbc"
+    },
+    "finesse-ui": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/finesse-ui/SKILL.md",
+      "computedHash": "8caefa32230c27d4685768fda5618bdd42edc4dd0c82c8dd717bb6832ccf9e6e"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
+      "computedHash": "4f571e7befb8b0946d9d7770232c818812412e9ab1dfb811f847edfba1fc6275"
+    },
+    "go-auditor": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/go-auditor/SKILL.md",
+      "computedHash": "23b6caccfdf0a0262056db9fd649d717e2cba911456862d04cd8a07fa07d6390"
+    },
+    "go-dev": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/go-dev/SKILL.md",
+      "computedHash": "e18c51ea07f645fe77001d72f4f3ed7a07d508e47244d7379850b347bfce5e90"
+    },
+    "go-mcp-builder": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/go-mcp-builder/SKILL.md",
+      "computedHash": "53e8d5e0fe1c7bd033856c37a08d47decbff9571a41fe1e2bd73d1adbccca7a4"
+    },
+    "ip-as-logo": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ip-as-logo/SKILL.md",
+      "computedHash": "ed36b206868ae03475df9a2eb982f9bf066936fc3abeae61f5592eb2f5e4cd96"
+    },
+    "mermaid-diagrams": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/mermaid-diagrams/SKILL.md",
+      "computedHash": "544b60cb80ff3f169d34d9f918f81d4719f70c2c7c51459e53a9cee400a27492"
+    },
+    "meteor-addon": {
+      "source": "MCDxAI/meteor-client-webgui",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/meteor-addon/SKILL.md",
+      "computedHash": "2a51a8ef1e8c901a3a1ce9a6dbf8a5d1d3785418197bfaa1253486301339da29"
+    },
+    "minecraft-ci-release": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-ci-release/SKILL.md",
+      "computedHash": "73e0bd74b643f64922ecb7bbec3e736bde391163692090974323e92593bf62c8"
+    },
+    "minecraft-commands-scripting": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-commands-scripting/SKILL.md",
+      "computedHash": "7c6ec10e0de4935665d21d8e757eb6763b69f6e6f84c7b5f0fe39b0b569597cf"
+    },
+    "minecraft-datapack": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-datapack/SKILL.md",
+      "computedHash": "d22a6666bd5e01bb061619675f03de9736b210316e86668f76693eb3272fc783"
+    },
+    "minecraft-essentials-ops": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-essentials-ops/SKILL.md",
+      "computedHash": "c7aaac01c654618d97e373e5ca5ac50da607e9f031ca5efa19b760c2e50d7337"
+    },
+    "minecraft-fabric-dev": {
+      "source": "0xnim/civutils",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-fabric-dev/SKILL.md",
+      "computedHash": "6f5f6e2edca415ba7fb2b57228f66f2cbc35154a79c4c69bd16d6183d8063c3d"
+    },
+    "minecraft-imagegen": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-imagegen/SKILL.md",
+      "computedHash": "da74304ef0845f6f12397e4be3b43131dc54d4aeac62f5a3cb8fd2b549e0c616"
+    },
+    "minecraft-modding": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-modding/SKILL.md",
+      "computedHash": "4966194cb94765ada2b01c796b79fd79b523890839a051c7226f2e6c33cf230d"
+    },
+    "minecraft-modding-workbench": {
+      "source": "adhi-jp/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/minecraft-modding-workbench/SKILL.md",
+      "computedHash": "c03dfc9e9997dcb2e2ce3ea6ea1bf340e597738ed5f601471d7c8e65f9ea83ca"
+    },
+    "minecraft-multiloader": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-multiloader/SKILL.md",
+      "computedHash": "815793162616d5d6a69f330ba09cd872762b7cdf0b6fecedd45df44c6ba0df9f"
+    },
+    "minecraft-plugin-dev": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-plugin-dev/SKILL.md",
+      "computedHash": "03b096291dec6d7497c7337220619b66431abd0ce482bac56c723bb728dfdbdc"
+    },
+    "minecraft-resource-pack": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-resource-pack/SKILL.md",
+      "computedHash": "5ac8d02674027a88041dfe01f3bff5545404faaff456a7738d513aa883ccfec6"
+    },
+    "minecraft-server-admin": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-server-admin/SKILL.md",
+      "computedHash": "3e78f4c8dd461b9d81a21a7cc9c20cc16765748af59505d95d164b21468118f5"
+    },
+    "minecraft-testing": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-testing/SKILL.md",
+      "computedHash": "dff4009e1214d0dd7be46a532f8adb4857348190b96f4f66b60a1e85a3e9674d"
+    },
+    "minecraft-world-generation": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-world-generation/SKILL.md",
+      "computedHash": "addd3063c8505c8ae7b9c2af0137325f00e35b8e4e812d581d764b8c0f992993"
+    },
+    "minecraft-worldedit-ops": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-worldedit-ops/SKILL.md",
+      "computedHash": "0ddfd0b773735da3ed111e676ae78f1c74e23cbfbc51497d49b059ca3a4c8791"
+    },
+    "playwright-cli-cdp": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/playwright-cli-cdp/SKILL.md",
+      "computedHash": "8e8567655727b93cc7697cb43c081b71540f8aac13838c0ac06f826789eb0253"
+    },
+    "rag-agent-builder": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/rag-agent-builder/SKILL.md",
+      "computedHash": "8e1a28055edfca6a1749af33ffbd329f0053259b043cd3655787c4f1db880644"
+    },
     "recall": {
       "source": "berserkdisruptors/contextual-commits",
       "sourceType": "github",
       "skillPath": "skills/recall/SKILL.md",
       "computedHash": "b12b1e8916baa48bf8374c6bc629f23acfb870d97e8a22ff629ef21face88317"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "computedHash": "59361179fc9225173e0c145ffd9bafbf9fdbf8b43ce3dc308497a0b4f83a6063"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "computedHash": "2abaeac1de432c76abda0ca7ba618901d2e94f8817b3650f9c523acea2d224f5"
     },
     "research": {
       "source": "Weizhena/Deep-Research-skills",
@@ -43,6 +279,18 @@
       "skillPath": "skills/research-codex-en/research-report/SKILL.md",
       "computedHash": "8fc1d26e247f1a47d5750fa0ad22084b82c3e5e8a5f00839c90a5b692c97d374"
     },
+    "simplify-codebase": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/simplify-codebase/SKILL.md",
+      "computedHash": "538e51c5ba3df7ffb8a9e31e8bfda608eb4e1177db3dcb2025ea78abdb6dbaeb"
+    },
+    "skill-engineer": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/skill-engineer/SKILL.md",
+      "computedHash": "7528abc2c21e719678ac16a5d1c83d019774a3c7743c95608344aee4f0fa30c7"
+    },
     "skill-generalizer": {
       "source": "hqhq1025/skill-optimizer",
       "sourceType": "github",
@@ -60,6 +308,82 @@
       "sourceType": "github",
       "skillPath": "skills/skill-personalizer/SKILL.md",
       "computedHash": "62d6713a27874b8ba80c227cbc43fc0a9551e2c93d94885263c6e3b51fc9f341"
+    },
+    "software-designer": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/software-designer/SKILL.md",
+      "computedHash": "2e3e11f09ae88bf4a35f833086e5e6fb9e1b36cb3d50cd0a6e8289a87a6d96b4"
+    },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "computedHash": "d5caecf77dad1d6b86be893ce3fdeb0222921c64bb955db8b12a5780eecb4ec6"
+    },
+    "svg-logo-designer": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/svg-logo-designer/SKILL.md",
+      "computedHash": "fdcff5fb606574b38d55b05dbf8f9e50ffdf9f41bf4b1e41f265005b2910edb5"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "3589907ee34dc8b1b7223a33fac98ab841a9e42f9960ab4433a832f0c6f00be0"
+    },
+    "tavily-web": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tavily-web/SKILL.md",
+      "computedHash": "b80e837c25cfc8c303722e8a1081958b1273fd5ac94f2ed14d17ef703c0d3208"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "computedHash": "3cfe4ebb6fa7288f668d87880d279c8e48f7a92b63415e296857060f5ce22e05"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-git-worktrees/SKILL.md",
+      "computedHash": "48c8a1040e378e0cb7208107294e3afa9067b9370c3f33b49a443eb6b7528b0d"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "computedHash": "ef8670c2a2d8e2f6ed52d6f3219759903300ca13afc5ec2e25826a735112562b"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "b529822bdac4b197b180fe12225cff86b930b65910435103c10622df7f041651"
+    },
+    "web-clone": {
+      "source": "betterlmy/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-clone/SKILL.md",
+      "computedHash": "7992c33f20f1f9d84a382dd97e82924d0c8694655b8db16cd47d02e3d74507e5"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "c2647b5bf067be353a893e5a39a632cbbeb7ad81e61fa5ae227ece5490029073"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/writing-skills/SKILL.md",
+      "computedHash": "f06bbb471439736c838e89a57a2a371bcc687931ba878901d97373194e212ea9"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "fabric-mod-development",
+  "owner": "newstarbar",
+  "repo": "modcrafting",
+  "path": "plugins/modcrafting-fabric/skills/fabric-mod-development",
+  "branch": "main",
+  "sha": "6c52bee988a318fbc07892eb19f0eb71670e6663",
+  "source": "manual"
+}
