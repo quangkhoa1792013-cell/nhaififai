@@ -1,240 +1,59 @@
-# AGENT_TASKS.md
+# AGENT_TASKS.md — Phân công và phối hợp công việc
 
-> Execution checklist for AI coding agents.
-> This file is the operational task list.
-> Use `TODO.md` as the background spec and trace each task back to its source section.
+> **Chỉ quản lý ai làm việc gì.** Danh sách task, phụ thuộc, trạng thái nghiệm thu và bằng chứng thuộc `TASK.md`; yêu cầu thuộc `TODO.md`. Không sao chép toàn bộ task vào đây.
+>
+> **Chưa kích hoạt multi-agent.** Khoa và ChatGPT sẽ cùng bàn mô hình đội ngũ, số agent, trách nhiệm và ngân sách token trước khi phân công. File này là mẫu quản lý, không tự yêu cầu spawn agent.
 
-## Working rules
+## (1) Trách nhiệm của các tài liệu
 
-- Read `TODO.md` first for product/context understanding.
-- Use this file as the execution order.
-- Every task must include a source section from `TODO.md`.
-- Every task must end with validation evidence.
-- If a dependency is missing or unclear, stop and report the blocker.
+- [ ] (1.1) `TODO.md`: nguồn đặc tả về chức năng/hành vi.
+- [ ] (1.2) `TASK.md`: nguồn duy nhất cho task ID, trạng thái, phụ thuộc và bằng chứng hoàn thành.
+- [ ] (1.3) `AGENT_TASKS.md`: ai nhận task nào, thời điểm bàn giao, xung đột phạm vi, tài nguyên/tokens dự kiến.
+- [ ] (1.4) `AGENTS.md` (nếu tạo sau khi bàn bạc): quy tắc phối hợp và thẩm quyền của đội; không tự tạo ở lượt này.
 
-## Task 1.1 — Validate project scope and constraints
-Source Section: (1.1)
-Related Requirements: (1.3), (2.3), (3.1)
-Depends On: none
-Priority: P0
-Status: [ ] planned
-Type: spec / validation
-Goal:
-- Confirm addon is Meteor client-side only.
-- Confirm no Baritone source patching.
-- Confirm no server-plugin requirement.
-Done when:
-- The scope is documented clearly.
-- No server-side dependency is required.
-Validation:
-- Check dependency declarations and docs.
-- Verify build system matches Meteor + Fabric only.
-Notes:
-- If not confirmed, stop and report the blocker.
+## (2) Danh sách phân công hiện tại
 
-## Task 1.2 — Finalize addon identity and versioning
-Source Section: (1.2)
-Related Requirements: (1.1), (2.7), (2.9)
-Depends On: (1.1)
-Priority: P0
-Status: [ ] planned
-Type: config / metadata
-Goal:
-- Choose addon name, mod ID, Java package, JAR naming, version scheme.
-Done when:
-- Identity and versioning are consistent in metadata.
-Validation:
-- Open `fabric.mod.json` and confirm values.
-- Run build metadata check.
-Notes:
-- Keep names stable and consistent with target version.
+| Task ID | Agent/Người phụ trách | Phạm vi file | Trạng thái phân công | Bàn giao | Ghi chú |
+|---|---|---|---|---|---|
+| Chưa giao | — | — | Unassigned | — | Đợi Khoa chốt cơ chế multi-agent |
 
-## Task 2.3 — Pin target versions and verify real artifacts
-Source Section: (2.3)
-Related Requirements: (2.4), (2.5), (2.6), (2.7)
-Depends On: (1.1), (1.2)
-Priority: P0
-Status: [ ] planned
-Type: dependency / validation
-Goal:
-- Lock Minecraft, Meteor, Fabric Loader, Baritone, JDK versions.
-- Verify real JARs before build.
-Done when:
-- Version matrix is fixed and documented.
-Validation:
-- Inspect Gradle config.
-- Check artifact metadata and dependency resolution.
-- Run compile smoke test.
-Notes:
-- Do not assume versions from memory.
+**Phân biệt:** Trạng thái phân công (`Unassigned / Reserved / Assigned / Handoff / Released`) ở đây **khác** trạng thái thực thi (`planned / in_progress / blocked / completed / failed`) trong `TASK.md`. Không sao chép status thực thi sang đây.
 
-## Task 2.4 — Verify Meteor build metadata and checksum
-Source Section: (2.4)
-Related Requirements: (2.3), (2.6)
-Depends On: (2.3)
-Priority: P0
-Status: [ ] planned
-Type: validation
-Goal:
-- Confirm Meteor build number and commit metadata.
-- Save checksum and build details.
-Done when:
-- The exact JAR and build info are documented.
-Validation:
-- Compare artifact metadata to the recorded build data.
-Notes:
-- If artifact cannot be verified, stop and report mismatch.
+## (3) Quy trình phân công dự kiến — chưa áp dụng tự động
 
-## Task 2.5 — Verify Baritone compatibility and API contract
-Source Section: (2.5)
-Related Requirements: (2.3), (4.1), (4.6)
-Depends On: (2.3)
-Priority: P0
-Status: [ ] planned
-Type: validation / compatibility
-Goal:
-- Confirm Baritone tag and commit.
-- Verify API compatibility with installed JAR.
-Done when:
-- Baritone version is pinned and documented.
-- Compatibility is confirmed or blocked explicitly.
-Validation:
-- Inspect dependency metadata.
-- Run minimal runtime compatibility smoke test.
-Notes:
-- Never guess API shape from memory.
+- [ ] (3.1) Chọn một Task ID từ `TASK.md` và xác minh dependency đã đạt; không tự đoán bước tiếp theo.
+- [ ] (3.2) Ước lượng phạm vi và chi phí công việc. Nếu một agent đủ xử lý và kiểm thử, ưu tiên một agent để tránh tốn token phối hợp.
+- [ ] (3.3) Chỉ giao việc cho nhiều agent khi Khoa đã đồng ý cách tổ chức; mô tả đầu ra, ranh giới file, mức quyền và điểm bàn giao của từng người.
+- [ ] (3.4) Trước khi giao, kiểm tra có agent khác giữ cùng file/task không; không giao hai agent sửa cùng một file đồng thời.
+- [ ] (3.5) Ghi `Assigned` và tên agent khi **thực sự** đã giao; không tạo agent giả trong bảng.
+- [ ] (3.6) Agent báo kết quả, lỗi và bằng chứng về người điều phối; người chịu trách nhiệm nghiệm thu cập nhật `TASK.md`.
+- [ ] (3.7) Khi task được nghiệm thu hoặc thu hồi, cập nhật `Released`, không tự đánh dấu `completed` chỉ vì agent báo đã code xong.
 
-## Task 3.1 — Create the Meteor entrypoint and lifecycle foundation
-Source Section: (3.1)
-Related Requirements: (3.2), (10.3), (13.3)
-Depends On: (1.2), (2.3), (2.7)
-Priority: P0
-Status: [ ] planned
-Type: scaffold / integration
-Goal:
-- Register module entrypoint.
-- Register commands.
-- Register settings.
-- Register event listeners.
-- Connect lifecycle hooks.
-Done when:
-- The addon boots without runtime errors.
-- Module loads correctly.
-Validation:
-- Run dev client or compile test.
-- Log startup output.
-Notes:
-- Keep scope tight; do not add optional features yet.
+## (4) Thông tin phải có trong một lượt giao việc
 
-## Task 4.1 — Build Baritone adapter validation layer
-Source Section: (4.1)
-Related Requirements: (4.2), (4.6), (4.9)
-Depends On: (3.1), (2.5)
-Priority: P0
-Status: [ ] planned
-Type: integration / safety
-Goal:
-- Detect Baritone runtime availability.
-- Verify version and API compatibility.
-- Fail gracefully when unavailable.
-Done when:
-- The adapter can detect missing or incompatible Baritone.
-Validation:
-- Compile code.
-- Trigger missing-Baritone behavior.
-- Trigger normal path and confirm readiness.
-Notes:
-- No assumptions about Baritone API without validation.
+- **Task ID:** ID đúng ở `TASK.md`.
+- **Mục tiêu:** Một kết quả có thể kiểm chứng, tham chiếu TODO khi cần.
+- **Phạm vi được phép:** File/thư mục, hành động, quyền commit/push (nếu được duyệt).
+- **Không được làm:** Những phần ngoài scope hoặc có owner khác.
+- **Phụ thuộc/đầu vào:** Task, branch, artifact và thông tin còn thiếu.
+- **Đầu ra và bằng chứng:** File thay đổi, kiểm thử, log, commit/ref nếu có.
+- **Bàn giao:** Ai review, điều kiện nghiệm thu, trường hợp phải hỏi Khoa.
+- **Dự toán chi phí:** Ước lượng số lượt agent/độ khó; không coi là số token chính xác.
 
-## Task 4.2 — Read selection correctly from API
-Source Section: (4.2)
-Related Requirements: (4.3), (4.4), (4.7)
-Depends On: (4.1)
-Priority: P0
-Status: [ ] planned
-Type: logic / validation
-Goal:
-- Read selection from real API instead of parsing chat text.
-- Validate min/max and bounding box.
-Done when:
-- A valid selection returns expected dimensions.
-Validation:
-- Unit test no-selection, single-selection, multi-selection cases.
-- Run runtime smoke test.
-Notes:
-- If selection cannot be read, mining logic must not run.
+## (5) Các quyết định sẽ bàn với Khoa trước khi dùng multi-agent
 
-## Task 5.1 — Define tool detection and calibration contract
-Source Section: (5.1)
-Related Requirements: (5.2), (5.3), (5.7), (6.1)
-Depends On: (4.2)
-Priority: P1
-Status: [ ] planned
-Type: logic / calibration
-Goal:
-- Detect tool identity and server-specific profile information.
-- Prepare calibration contract for 3x3 tools.
-Done when:
-- Tool fingerprint and profile metadata are readable.
-Validation:
-- Log detected tool information.
-- Simulate known vs unknown tool scenarios.
-Notes:
-- Default to unsafe if tool cannot be validated.
+- [ ] (5.1) Có cần multi-agent cho giai đoạn A hay một agent là đủ?
+- [ ] (5.2) Giới hạn số agent hoạt động cùng lúc và ngân sách token/chi phí.
+- [ ] (5.3) Chọn vai trò điều phối, thực hiện, kiểm thử, review — có cần tách vai trò hay một người kiêm nhiệm?
+- [ ] (5.4) Khi nào được phân việc song song, khi nào phải tuần tự theo dependency?
+- [ ] (5.5) Quy ước nhánh Git/worktree, tránh hai người ghi cùng file và cách tích hợp thay đổi.
+- [ ] (5.6) Ai có quyền commit, push, tạo PR, merge; có cần Khoa xác nhận từng bước không?
+- [ ] (5.7) Khi agent hết ngân sách, cần thêm quyền hoặc gặp yêu cầu chưa rõ thì bàn giao thế nào?
+- [ ] (5.8) Cách đo hiệu quả multi-agent so với làm tuần tự: thời gian, lỗi, token và số task thực sự nghiệm thu.
 
-## Task 6.1 — Implement the core Smart Selection Miner workflow
-Source Section: (6.1)
-Related Requirements: (6.2), (6.8), (6.9), (6.15)
-Depends On: (4.2), (5.1), (4.1)
-Priority: P0
-Status: [ ] planned
-Type: feature / safety
-Goal:
-- Read selected area and tool.
-- Prepare a mining plan using safe defaults.
-- Produce preview before execution.
-Done when:
-- The system can create a valid mining plan.
-- Strict mode blocks unsafe out-of-bounds blocks.
-Validation:
-- Run dev-client selection test.
-- Confirm preview and state transitions.
-- Confirm no mining before confirm.
-Notes:
-- Default to Safe and Strict until validated.
+## (6) Chú ý
 
-## Task 15.5 — Phase A implementation milestone
-Source Section: (15.5)
-Related Requirements: (1.3), (2.7), (3.1), (4.1), (4.2)
-Depends On: (1.1), (1.2), (2.3), (3.1)
-Priority: P0
-Status: [ ] planned
-Type: milestone
-Goal:
-- Deliver skeleton, adapter foundation, command/status layer, selection read path.
-Done when:
-- The project builds and boots.
-- A command/status layer is present.
-- Selection can be read and passed to planner logic.
-Validation:
-- Run compile check.
-- Start dev client.
-- Confirm command registration and selection output.
-Notes:
-- Phase A is the minimum usable foundation; avoid scope creep.
-
-## Recommended order
-
-1. (1.1) Validate scope and constraints
-2. (1.2) Finalize addon identity and versioning
-3. (2.3) Pin versions and verify artifacts
-4. (2.4) Verify Meteor metadata
-5. (2.5) Verify Baritone compatibility
-6. (3.1) Create entrypoint foundation
-7. (4.1) Build adapter validation
-8. (4.2) Read selection correctly
-9. (5.1) Define tool detection and calibration contract
-10. (6.1) Build MVP Smart Selection Miner flow
-11. (15.5) Phase A milestone
-
-This file is the execution checklist for agent work. `TODO.md` remains the source spec.
+- Không đặt danh sách task triển khai lặp lại vào file này; chỉ tham chiếu Task ID.
+- Không tạo `AGENTS.md` cho đến khi Khoa duyệt quy tắc đội ngũ.
+- Không tự kích hoạt agent hoặc tiêu token chỉ để hoàn thành bảng phân công.
+- Khi công việc làm thay đổi chức năng, cập nhật `TODO.md` trước, rồi cập nhật kế hoạch `TASK.md`; sau cùng mới phân công ở đây.
