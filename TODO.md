@@ -1,6 +1,6 @@
 # TODO — nhaififai: Smart Baritone Addon
 
-> **Trạng thái:** Đặc tả công việc, chưa phải mã nguồn. Nguồn: báo cáo trong `chat.md` ngày 08/10/2026. Ô `[ ]` là chưa hoàn thành; `[?]` là phải khảo sát hoặc Khoa quyết định. Không coi các giả thuyết về server là sự thật đã xác minh.
+> **Trạng thái:** Đặc tả sản phẩm, chưa phải mã nguồn. `TASK.md` quản lý việc thực hiện và kiểm chứng; `AGENT_TASKS.md` chỉ quản lý phân công, không lặp checklist. Nguồn: báo cáo trong `chat.md` ngày 08/10/2026. Ô `[ ]` là chưa hoàn thành; `[?]` là phải khảo sát hoặc Khoa quyết định. Không coi các giả thuyết về server là sự thật đã xác minh.
 >
 > **Mục tiêu:** Addon Java cho Meteor Client, lập kế hoạch và điều phối Baritone; người dùng xem trước, xác nhận, tạm dừng, tiếp tục hoặc hủy tác vụ. Ưu tiên module Smart Selection Miner trước; các module khác triển khai từng giai đoạn.
 
@@ -30,8 +30,8 @@
 
 ## (2) Repo, môi trường và tương thích
 
-- [ ] (2.1) Mở `quangkhoa1792013-cell/nhaififai` nhánh `main`; kiểm tra `git status`, remotes, commit hiện tại và thay đổi chưa commit trước khi ghi đè bất kỳ thứ gì.
-- [ ] (2.2) Xác minh lại mốc khảo sát `8d92d31` (first commit) còn đúng với repo hiện tại hay không; không giả định repo vẫn chỉ có README.
+- [ ] (2.1) Làm việc trên `quangkhoa1792013-cell/nhaififai`, nhánh mặc định `master`; trước mỗi lần sửa kiểm tra HEAD/phiên bản file và thay đổi liên quan, tránh ghi đè công việc mới.
+- [ ] (2.2) Đối chiếu lịch sử commit với mốc khảo sát `8d92d31` (first commit); hiện repo đã có `TODO.md`, `TASK.md`, `AGENT_TASKS.md`, `TODO-fix.md`, `skills-lock.json` và `.agents/skills/`, chưa thấy project Java/Gradle trong lần kiểm tra 27/10/2026.
 - [ ] (2.3) Khóa target Minecraft `1.21.11`, Meteor `1.21.11-82`, Fabric Loader `0.19.5`, Baritone `v1.17.0`, JDK 21; kiểm tra lại JAR thực tế trước build.
 - [ ] (2.4) Đối chiếu Meteor build 82 với commit `7fc97a87…` đã ghi ở báo cáo; lưu full SHA, tag/build metadata, checksum JAR.
 - [ ] (2.5) Đối chiếu Baritone tag `v1.17.0` commit `23723891da460ef15797b02fe5b385b0c5b163cc`, chữ ký API với JAR người dùng đang cài.
@@ -269,4 +269,6 @@
 - [ ] (15.9) Giai đoạn E: SmartGoto + hazard navigation + task queue + GUI hoàn chỉnh.
 - [ ] (15.10) Giai đoạn F: tính năng từ TikTok đã xác minh, mở rộng planner hoặc AI tùy chọn, tối ưu hóa hiệu năng.
 
+> **Quy ước đồng bộ:** Chỉ sửa yêu cầu trong file này; task triển khai tham chiếu ID tương ứng ở `TASK.md`. Nếu phát sinh yêu cầu mới khi làm task, cập nhật TODO trước khi triển khai. Những ô `[?]` cần Khoa quyết định, không coi lựa chọn mặc định là đã duyệt.
+>
 > **Điểm bắt đầu khi tiếp tục coding:** xử lý (1.4)–(1.9), xác nhận repo/version ở (2), rồi thực hiện giai đoạn A của (15). Không tự ý làm toàn bộ module cùng lúc.
